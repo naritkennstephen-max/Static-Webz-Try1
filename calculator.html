@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+
+    <h2>Simple Calculator</h2>
+    <input type="number" id="number1" placeholder="Enter first number"><br><br>
+    <select id="operation">
+        <option value="">Select operation</option>
+        <option value="+">Addition</option>
+        <option value="-">Subtraction</option>
+        <option value="*">Multiplication</option>
+        <option value="/">Division</option>
+    </select><BR><br>
+    <input type="number" id="number2" placeholder="Enter second number"> <br><br>
+    
+    <button onclick ="calculate()">Calculate</button>
+
+    <h2 id="result"> The result:</h2>
+
+    <div id="page"> 
+        <h1 id="title">Sample JS</h1>
+        <button onclick="changeblue()">Blue</button>
+        <button onclick="changered()">Red</button>
+        <button onclick="changegreen()">Green</button>
+        <button onclick="changewhite()">Reset</button>
+        <button onclick="changeText()">Change Text</button>
+        <button onclick="resetText()">Reset Text</button>
+    </div>
+
+    <script>
+        
+        function changeblue(){
+            document.getElementById("page").style.backgroundColor = "blue";
+        }
+
+        function changered(){
+            document.getElementById("page").style.backgroundColor = "red";
+        }
+
+        function changegreen(){
+            document.getElementById("page").style.backgroundColor = "green";
+        }
+
+        function changewhite(){
+            document.getElementById("page").style.backgroundColor = "white";
+        }
+
+        function changeText(){
+            document.getElementById("title").innerHTML = "Hello World";
+        }
+
+        const originalText = document.getElementById("title").textContent;
+
+        function resetText(){
+            document.getElementById("title").textContent = originalText;
+        }
+
+        function calculate(){
+            let num1 = Number(document.getElementById("number1").value);
+            let num2 = Number(document.getElementById("number2").value);
+            let operation = document.getElementById("operation").value;
+
+            let result;
+
+            if(operation === "+") {
+                result = num1 + num2;
+            } else if(operation === "-") {
+                result = num1 - num2;
+            } else if(operation === "*") {
+                result = num1 * num2;
+            } else if(operation === "/") {
+               if(num2 === 0) {
+                    alert("Error: Division by zero is not allowed.");
+                    return;
+                }
+                result = num1 / num2;
+            } else {
+                alert("Invalid operation.")
+                return;
+            }
+
+            document.getElementById("result").innerText = "The result: " + result;
+        }
+            
+       
+       
+        
+    </script>
+
+</body>
+</html>

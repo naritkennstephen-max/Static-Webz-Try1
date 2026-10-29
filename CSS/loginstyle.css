@@ -1,0 +1,15 @@
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.loginlog{
+    background: linear-gradient(to right, rgb(56, 54, 170), rgb(223, 40, 192));
+    border-radius: 20px;
+    padding: 30px;
+    BORDER: 1px solid black;
+    width: auto;
+}

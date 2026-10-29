@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS\style.css">
+    <title>Simple Website</title>
+  
+</head>
+<body>
+    <nav>
+        <div class="logo">LOGO</div>
+        <div class="links">
+            <a href="dashboard.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="highlights.html">Highlights</a>
+            <a href="calculator.html">Services</a>
+            <a href="https://wutheringwaves.kurogames-ads.com/download/?page_id=EMC0E72eMV&utm_source=pc_googleadwords_int&utm_campaign=search&campaignid=23658235917&adgroupid=198422516539&keyword=wuthering+waves&device=c&ad_id=816102815673&channel=g&gad_source=1&gad_campaignid=23658235917&gbraid=0AAAAABbLAwhE74MvM9_J2J57ffZ6SKi23&gclid=CjwKCAjww-3VBhAcEiwAwUUIu9R9R-Ayip0GfYciVlrfmCT7xX3qcMDrhGYRkwzm8hv8DnnWugj7GRoCjhkQAvD_BwE&lang=en" target="blank">WUWA</a>
+        </div>
+        <div class="search">    
+            
+            <button onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>A story worth remembering</h1>
+        <p>Discover the moments and people that make this my favorite story.</p>
+        <a href="about.html" class="btn">Explore More</a>
+    </section>
+    <section class="featured">
+        <h2>Featured</h2>
+        <p>Check out our favorite!</p>
+        
+        <div class="featured-card">
+            <img src="https://static.wikia.nocookie.net/cyberpunk/images/c/c1/Cyberpunk_Edgerunners_Trigger_2.jpg/revision/latest?cb=20220801170122" alt="Featured 1">
+        <div class="featured-text">
+            <h3>Favorite Show</h3>
+        <p>"This is show has one of most sophisticated storytelling and world building!"</p>
+        <a href="highlights.html" class="btn">See Highlights</a>
+        </div>      
+     </div>
+     
+     
+     <div class="reason">   
+        <div class="reason-card">
+        <h3>Character ╰(*°▽°*)╯</h3>
+        <p>This show stands out for killing off it's characters.</p>
+     </div>
+      <div class="reason-card1">
+        <h3>Music ╰(*°▽°*)╯</h3>
+        <p>The song "I really want to stay at your house" stuck with the fans.</p>
+     </div>
+     <div class="reason">   
+        <div class="reason-card">
+        <h3>Character ╰(*°▽°*)╯</h3>
+        <p>This show stands out for killing off it's characters.</p>
+     </div>
+     </div>
+
+    </section>
+
+    <script>
+        function logout() {
+            if (confirm("Are you sure about that?")) {
+            
+            alert("You have been logged out, so weak.");
+            window.location.href = "index.html";} // Redirect to login.html after logout
+            else {
+                alert("Logout cancelled, wise decision.");
+            }
+        }
+    </script>
+
+</body>
+</html>

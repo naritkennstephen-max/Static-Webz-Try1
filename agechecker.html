@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Age Checker</h2>
+    <input type="number" id="age" placeholder="Enter your age">
+    <button onclick="checkAge()">Check Age</button>
+    <p id="message"></p>
+
+    <script>
+        function checkAge() {
+            let age = Number(document.getElementById("age").value);
+            let message = document.getElementById("message");
+
+            if (age <= 0) {
+                message.innerText = "Please enter a valid age.";
+            } else if (age <= 17) {
+                message.innerText = "You are a minor.";
+            } else if (age <= 18) {
+                message.innerText = "You are an adult.";
+            } else {
+                message.innerText = "You are a senior.";
+            }
+        }
+    </script>
+</body>
+</html>
